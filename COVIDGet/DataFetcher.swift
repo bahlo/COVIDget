@@ -22,9 +22,23 @@ public class DataFetcher: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 // nop
-                print("hi")
             }) { response in
             completion(response)
+        }
+        .store(in: &cancellable)
+    }
+    
+    func getAttributes(objectId: Int, completion: @escaping (DistrictAttributes) -> Void) {
+        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=OBJECTID%3D\(objectId)&outFields=GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
+        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
+            .map{ $0.data }
+            .decode(type: DistrictData.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                // nop
+            }) { response in
+                completion(response.features[0].attributes)
         }
         .store(in: &cancellable)
     }
