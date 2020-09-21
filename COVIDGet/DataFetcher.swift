@@ -14,7 +14,7 @@ public class DataFetcher: ObservableObject {
     static let shared = DataFetcher()
     
     func getDistrictData(completion: @escaping (DistrictData) -> Void) {
-        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&outSR=4326&f=json")!
+        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
         URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
             .map{ $0.data }
             .decode(type: DistrictData.self, decoder: JSONDecoder())
