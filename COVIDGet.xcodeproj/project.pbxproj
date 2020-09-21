@@ -13,16 +13,15 @@
 		1424F4BA2518BFEF00CF2D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4B92518BFEF00CF2D70 /* Preview Assets.xcassets */; };
 		1424F4C52518BFEF00CF2D70 /* COVIDGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4C42518BFEF00CF2D70 /* COVIDGetTests.swift */; };
 		1424F4D02518BFEF00CF2D70 /* COVIDGetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4CF2518BFEF00CF2D70 /* COVIDGetUITests.swift */; };
-		1424F4E72518C01200CF2D70 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E62518C01200CF2D70 /* WidgetKit.framework */; };
-		1424F4E92518C01200CF2D70 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E82518C01200CF2D70 /* SwiftUI.framework */; };
-		1424F4EC2518C01200CF2D70 /* NewInfections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4EB2518C01200CF2D70 /* NewInfections.swift */; };
-		1424F4EF2518C01400CF2D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4EE2518C01400CF2D70 /* Assets.xcassets */; };
-		1424F4F12518C01400CF2D70 /* NewInfections.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4ED2518C01200CF2D70 /* NewInfections.intentdefinition */; };
-		1424F4F22518C01400CF2D70 /* NewInfections.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4ED2518C01200CF2D70 /* NewInfections.intentdefinition */; };
-		1424F4F52518C01400CF2D70 /* NewInfectionsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1424F4E42518C01200CF2D70 /* NewInfectionsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1424F4FF2518C90E00CF2D70 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
-		1424F5002518C90E00CF2D70 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
 		1424F5062518D55800CF2D70 /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F5052518D55800CF2D70 /* DataFetcherTests.swift */; };
+		14B54E542518EFF00089F2C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E62518C01200CF2D70 /* WidgetKit.framework */; };
+		14B54E552518EFF00089F2C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E82518C01200CF2D70 /* SwiftUI.framework */; };
+		14B54E582518EFF00089F2C8 /* NewInfectionsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */; };
+		14B54E5B2518EFF10089F2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B54E5A2518EFF10089F2C8 /* Assets.xcassets */; };
+		14B54E5D2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
+		14B54E5E2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
+		14B54E612518EFF10089F2C8 /* NewInfectionsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +39,12 @@
 			remoteGlobalIDString = 1424F4AE2518BFEE00CF2D70;
 			remoteInfo = COVIDGet;
 		};
-		1424F4F32518C01400CF2D70 /* PBXContainerItemProxy */ = {
+		14B54E5F2518EFF10089F2C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1424F4A72518BFEE00CF2D70 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1424F4E32518C01200CF2D70;
-			remoteInfo = NewInfectionsExtension;
+			remoteGlobalIDString = 14B54E522518EFF00089F2C8;
+			remoteInfo = NewInfectionsWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1424F4F52518C01400CF2D70 /* NewInfectionsExtension.appex in Embed App Extensions */,
+				14B54E612518EFF10089F2C8 /* NewInfectionsWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,15 +75,15 @@
 		1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDGetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1424F4CF2518BFEF00CF2D70 /* COVIDGetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDGetUITests.swift; sourceTree = "<group>"; };
 		1424F4D12518BFEF00CF2D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1424F4E42518C01200CF2D70 /* NewInfectionsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewInfectionsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1424F4E62518C01200CF2D70 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1424F4E82518C01200CF2D70 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		1424F4EB2518C01200CF2D70 /* NewInfections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfections.swift; sourceTree = "<group>"; };
-		1424F4ED2518C01200CF2D70 /* NewInfections.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NewInfections.intentdefinition; sourceTree = "<group>"; };
-		1424F4EE2518C01400CF2D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1424F4F02518C01400CF2D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		1424F5052518D55800CF2D70 /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
+		14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewInfectionsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfectionsWidget.swift; sourceTree = "<group>"; };
+		14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NewInfectionsWidget.intentdefinition; sourceTree = "<group>"; };
+		14B54E5A2518EFF10089F2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14B54E5C2518EFF10089F2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +108,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1424F4E12518C01200CF2D70 /* Frameworks */ = {
+		14B54E502518EFF00089F2C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1424F4E92518C01200CF2D70 /* SwiftUI.framework in Frameworks */,
-				1424F4E72518C01200CF2D70 /* WidgetKit.framework in Frameworks */,
+				14B54E552518EFF00089F2C8 /* SwiftUI.framework in Frameworks */,
+				14B54E542518EFF00089F2C8 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +126,7 @@
 				1424F4B12518BFEE00CF2D70 /* COVIDGet */,
 				1424F4C32518BFEF00CF2D70 /* COVIDGetTests */,
 				1424F4CE2518BFEF00CF2D70 /* COVIDGetUITests */,
-				1424F4EA2518C01200CF2D70 /* NewInfections */,
+				14B54E562518EFF00089F2C8 /* NewInfectionsWidget */,
 				1424F4E52518C01200CF2D70 /* Frameworks */,
 				1424F4B02518BFEE00CF2D70 /* Products */,
 			);
@@ -139,7 +138,7 @@
 				1424F4AF2518BFEE00CF2D70 /* COVIDGet.app */,
 				1424F4C02518BFEF00CF2D70 /* COVIDGetTests.xctest */,
 				1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */,
-				1424F4E42518C01200CF2D70 /* NewInfectionsExtension.appex */,
+				14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,15 +192,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1424F4EA2518C01200CF2D70 /* NewInfections */ = {
+		14B54E562518EFF00089F2C8 /* NewInfectionsWidget */ = {
 			isa = PBXGroup;
 			children = (
-				1424F4EB2518C01200CF2D70 /* NewInfections.swift */,
-				1424F4ED2518C01200CF2D70 /* NewInfections.intentdefinition */,
-				1424F4EE2518C01400CF2D70 /* Assets.xcassets */,
-				1424F4F02518C01400CF2D70 /* Info.plist */,
+				14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */,
+				14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */,
+				14B54E5A2518EFF10089F2C8 /* Assets.xcassets */,
+				14B54E5C2518EFF10089F2C8 /* Info.plist */,
 			);
-			path = NewInfections;
+			path = NewInfectionsWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1424F4F42518C01400CF2D70 /* PBXTargetDependency */,
+				14B54E602518EFF10089F2C8 /* PBXTargetDependency */,
 			);
 			name = COVIDGet;
 			productName = COVIDGet;
@@ -262,21 +261,21 @@
 			productReference = 1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1424F4E32518C01200CF2D70 /* NewInfectionsExtension */ = {
+		14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1424F4F62518C01400CF2D70 /* Build configuration list for PBXNativeTarget "NewInfectionsExtension" */;
+			buildConfigurationList = 14B54E622518EFF10089F2C8 /* Build configuration list for PBXNativeTarget "NewInfectionsWidgetExtension" */;
 			buildPhases = (
-				1424F4E02518C01200CF2D70 /* Sources */,
-				1424F4E12518C01200CF2D70 /* Frameworks */,
-				1424F4E22518C01200CF2D70 /* Resources */,
+				14B54E4F2518EFF00089F2C8 /* Sources */,
+				14B54E502518EFF00089F2C8 /* Frameworks */,
+				14B54E512518EFF00089F2C8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NewInfectionsExtension;
-			productName = NewInfectionsExtension;
-			productReference = 1424F4E42518C01200CF2D70 /* NewInfectionsExtension.appex */;
+			name = NewInfectionsWidgetExtension;
+			productName = NewInfectionsWidgetExtension;
+			productReference = 14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +298,7 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 1424F4AE2518BFEE00CF2D70;
 					};
-					1424F4E32518C01200CF2D70 = {
+					14B54E522518EFF00089F2C8 = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -320,7 +319,7 @@
 				1424F4AE2518BFEE00CF2D70 /* COVIDGet */,
 				1424F4BF2518BFEF00CF2D70 /* COVIDGetTests */,
 				1424F4CA2518BFEF00CF2D70 /* COVIDGetUITests */,
-				1424F4E32518C01200CF2D70 /* NewInfectionsExtension */,
+				14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -349,11 +348,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1424F4E22518C01200CF2D70 /* Resources */ = {
+		14B54E512518EFF00089F2C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1424F4EF2518C01400CF2D70 /* Assets.xcassets in Resources */,
+				14B54E5B2518EFF10089F2C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */,
-				1424F4F22518C01400CF2D70 /* NewInfections.intentdefinition in Sources */,
+				14B54E5E2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */,
 				1424F4B32518BFEE00CF2D70 /* COVIDGetApp.swift in Sources */,
 				1424F4FF2518C90E00CF2D70 /* DataFetcher.swift in Sources */,
 			);
@@ -388,13 +387,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1424F4E02518C01200CF2D70 /* Sources */ = {
+		14B54E4F2518EFF00089F2C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1424F5002518C90E00CF2D70 /* DataFetcher.swift in Sources */,
-				1424F4EC2518C01200CF2D70 /* NewInfections.swift in Sources */,
-				1424F4F12518C01400CF2D70 /* NewInfections.intentdefinition in Sources */,
+				14B54E582518EFF00089F2C8 /* NewInfectionsWidget.swift in Sources */,
+				14B54E5D2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +409,10 @@
 			target = 1424F4AE2518BFEE00CF2D70 /* COVIDGet */;
 			targetProxy = 1424F4CC2518BFEF00CF2D70 /* PBXContainerItemProxy */;
 		};
-		1424F4F42518C01400CF2D70 /* PBXTargetDependency */ = {
+		14B54E602518EFF10089F2C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1424F4E32518C01200CF2D70 /* NewInfectionsExtension */;
-			targetProxy = 1424F4F32518C01400CF2D70 /* PBXContainerItemProxy */;
+			target = 14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */;
+			targetProxy = 14B54E5F2518EFF10089F2C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -665,20 +663,20 @@
 			};
 			name = Release;
 		};
-		1424F4F72518C01400CF2D70 /* Debug */ = {
+		14B54E632518EFF10089F2C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK9NEP7BV6;
-				INFOPLIST_FILE = NewInfections/Info.plist;
+				INFOPLIST_FILE = NewInfectionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfections;
+				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfectionsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -686,20 +684,20 @@
 			};
 			name = Debug;
 		};
-		1424F4F82518C01400CF2D70 /* Release */ = {
+		14B54E642518EFF10089F2C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK9NEP7BV6;
-				INFOPLIST_FILE = NewInfections/Info.plist;
+				INFOPLIST_FILE = NewInfectionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfections;
+				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfectionsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -746,11 +744,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1424F4F62518C01400CF2D70 /* Build configuration list for PBXNativeTarget "NewInfectionsExtension" */ = {
+		14B54E622518EFF10089F2C8 /* Build configuration list for PBXNativeTarget "NewInfectionsWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1424F4F72518C01400CF2D70 /* Debug */,
-				1424F4F82518C01400CF2D70 /* Release */,
+				14B54E632518EFF10089F2C8 /* Debug */,
+				14B54E642518EFF10089F2C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

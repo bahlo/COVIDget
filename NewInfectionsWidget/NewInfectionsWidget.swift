@@ -1,6 +1,6 @@
 //
-//  NewInfections.swift
-//  NewInfections
+//  NewInfectionsWidget.swift
+//  NewInfectionsWidget
 //
 //  Created by Arne Bahlo on 21.09.20.
 //
@@ -40,7 +40,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
-struct NewInfectionsEntryView : View {
+struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -49,21 +49,21 @@ struct NewInfectionsEntryView : View {
 }
 
 @main
-struct NewInfections: Widget {
-    let kind: String = "NewInfections"
+struct NewInfectionsWidget: Widget {
+    let kind: String = "NewInfectionsWidget"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            NewInfectionsEntryView(entry: entry)
+            NewInfectionsWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
 }
 
-struct NewInfections_Previews: PreviewProvider {
+struct NewInfectionsWidget_Previews: PreviewProvider {
     static var previews: some View {
-        NewInfectionsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        NewInfectionsWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
