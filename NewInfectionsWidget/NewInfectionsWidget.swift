@@ -11,22 +11,12 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> NewInfectionsEntry {
-        NewInfectionsEntry(
-            date: Date(),
-            configuration: ConfigurationIntent(),
-            district: "--",
-            cases: 0
-        )
+        NewInfectionsEntry()
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (NewInfectionsEntry) -> ()) {
         DataFetcher.shared.getAttributes(objectId: 125) { attributes in
-            let entry = NewInfectionsEntry(
-                date: Date(),
-                configuration: configuration,
-                district: attributes.gen,
-                cases: attributes.cases
-            )
+            let entry = NewInfectionsEntry(configuration: configuration, attributes: attributes)
             completion(entry)
         }
     }
@@ -34,12 +24,7 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         DataFetcher.shared.getAttributes(objectId: 125) { attributes in
             let entries = [
-                NewInfectionsEntry(
-                    date: Date(),
-                    configuration: configuration,
-                    district: attributes.gen,
-                    cases: attributes.cases
-                )
+                NewInfectionsEntry(configuration: configuration, attributes: attributes)
             ]
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
@@ -61,6 +46,23 @@ struct NewInfectionsEntry: TimelineEntry {
             dateFormatter.locale = Locale.current
             return dateFormatter.string(from: date)
         }
+    }
+    
+    init() {
+        date = Date()
+        configuration = ConfigurationIntent()
+        cases = 0
+        district = "--"
+    }
+    
+    init(configuration: ConfigurationIntent, attributes: DistrictAttributes) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy, HH:mm Uhr"
+        
+        date = dateFormatter.date(from: attributes.lastUpdate) ?? Date()
+        self.configuration = configuration
+        district = attributes.gen
+        cases = attributes.cases
     }
 }
 
@@ -109,12 +111,7 @@ struct NewInfectionsWidget: Widget {
 
 struct NewInfectionsWidget_Previews: PreviewProvider {
     static var previews: some View {
-        NewInfectionsWidgetEntryView(entry: NewInfectionsEntry(
-            date: Date(),
-            configuration: ConfigurationIntent(),
-            district: "Main-Kinzig-Kreis",
-            cases: 42
-        ))
+        NewInfectionsWidgetEntryView(entry: NewInfectionsEntry())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
