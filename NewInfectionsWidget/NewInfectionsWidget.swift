@@ -10,23 +10,38 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+    func placeholder(in context: Context) -> NewInfectionsEntry {
+        NewInfectionsEntry(
+            date: Date(),
+            configuration: ConfigurationIntent(),
+            district: "--",
+            cases: 0
+        )
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (NewInfectionsEntry) -> ()) {
+        let entry = NewInfectionsEntry(
+            date: Date(),
+            configuration: configuration,
+            district: "--",
+            cases: 0
+        )
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [NewInfectionsEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = NewInfectionsEntry(
+                date: entryDate,
+                configuration: configuration,
+                district: "--",
+                cases: 0
+            )
             entries.append(entry)
         }
 
@@ -35,16 +50,49 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct NewInfectionsEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
+    let district: String
+    let cases: Int
+    
+    var formattedDate: String {
+        get {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            dateFormatter.timeStyle = .none
+            dateFormatter.locale = Locale.current
+            return dateFormatter.string(from: date)
+        }
+    }
 }
 
 struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack{
+            VStack(alignment: .leading){
+                Text("New infections")
+                    .font(.headline)
+                Text(entry.district)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            Text("\(entry.cases)")
+                .font(.system(size: 40))
+                .foregroundColor(.red)
+                .fontWeight(.medium)
+            Spacer()
+            HStack(spacing: 4) {
+                Image(systemName: "calendar")
+                    .font(.system(size: 12))
+                Text("\(entry.formattedDate)")
+                    .font(.footnote)
+            }
+                .foregroundColor(.gray)
+        }.padding()
     }
 }
 
@@ -56,14 +104,20 @@ struct NewInfectionsWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             NewInfectionsWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("New Infections")
+        .description("Display the new infections for a district.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
 struct NewInfectionsWidget_Previews: PreviewProvider {
     static var previews: some View {
-        NewInfectionsWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        NewInfectionsWidgetEntryView(entry: NewInfectionsEntry(
+            date: Date(),
+            configuration: ConfigurationIntent(),
+            district: "Main-Kinzig-Kreis",
+            cases: 42
+        ))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
