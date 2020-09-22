@@ -15,10 +15,7 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (NewInfectionsEntry) -> ()) {
-        DataFetcher.shared.getAttributes(objectId: 125) { attributes in
-            let entry = NewInfectionsEntry(configuration: configuration, attributes: attributes)
-            completion(entry)
-        }
+        completion(NewInfectionsEntry())
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -55,8 +52,8 @@ struct NewInfectionsEntry: TimelineEntry {
     init() {
         date = Date()
         configuration = ConfigurationIntent()
-        cases7Per100k = 0
-        district = "--"
+        cases7Per100k = 42
+        district = "Magrathea"
     }
     
     init(configuration: ConfigurationIntent, attributes: DistrictAttributes) {
