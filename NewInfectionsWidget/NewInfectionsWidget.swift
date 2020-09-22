@@ -82,18 +82,24 @@ struct NewInfectionsWidgetEntryView : View {
                     .font(.headline)
                 Text(entry.district)
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
             }
             Spacer()
-            Text(String(format: "%.0f", entry.cases7Per100k))
+            Group {
+                if entry.cases7Per100k < 1 {
+                    Text("0")
+                        .foregroundColor(.secondary)
+                } else {
+                    Text(String(format: "%.0f", entry.cases7Per100k))
+                        .foregroundColor(.red)
+                }
+            }
                 .font(.system(size: 40))
-                .foregroundColor(.red)
-                .fontWeight(.medium)
             Spacer()
             Text(inOneWeek)
-                .font(.footnote)
-                .foregroundColor(.gray)
-        }.padding()
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+        }.padding(12)
     }
 }
 
