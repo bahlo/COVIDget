@@ -26,7 +26,11 @@ struct Provider: IntentTimelineProvider {
             let entries = [
                 NewInfectionsEntry(configuration: configuration, attributes: attributes)
             ]
-            let timeline = Timeline(entries: entries, policy: .atEnd)
+            
+            let in24h = Calendar.current.date(byAdding: .day, value: 1, to: Date())
+            let tomorrow = Calendar.current.startOfDay(for: in24h!)
+
+            let timeline = Timeline(entries: entries, policy: .after(tomorrow))
             completion(timeline)
         }
     }
