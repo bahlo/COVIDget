@@ -72,11 +72,13 @@ struct NewInfectionsEntry: TimelineEntry {
 
 struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
+    let newInfections: LocalizedStringKey = "NEW_INFECTIONS"
+    let last7Days: LocalizedStringKey = "LAST_SEVEN_DAYS"
 
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("New infections")
+                Text(newInfections)
                     .font(.headline)
                 Text(entry.district)
                     .font(.subheadline)
@@ -88,7 +90,7 @@ struct NewInfectionsWidgetEntryView : View {
                 .foregroundColor(.red)
                 .fontWeight(.medium)
             Spacer()
-            Text("In the last 7 days")
+            Text(last7Days)
                 .font(.footnote)
                 .foregroundColor(.gray)
         }.padding()
