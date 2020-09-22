@@ -111,8 +111,8 @@ struct NewInfectionsWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             NewInfectionsWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("New Infections")
-        .description("Display the new infections for a district.")
+        .configurationDisplayName(NSLocalizedString("NEW_INFECTIONS", comment: "Headline for new infections widget"))
+        .description(NSLocalizedString("NEW_INFECTIONS_DESCRIPTION", comment: "Description of new infections widget"))
         .supportedFamilies([.systemSmall])
     }
 }

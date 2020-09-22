@@ -7,3 +7,4 @@
 */
 "NEW_INFECTIONS" = "Neuinfektionen";
 "IN_ONE_WEEK" = "in einer Woche";
+"NEW_INFECTIONS_DESCRIPTION" = "Zeigt die Anzahl der Neuinfektionen in den letzten sieben Tagen.";

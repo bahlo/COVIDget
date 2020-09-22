@@ -7,3 +7,4 @@
 */
 "NEW_INFECTIONS" = "New infections";
 "IN_ONE_WEEK" = "in one week";
+"NEW_INFECTIONS_DESCRIPTION" = "Display the new infections in your district in the last seven days.";
