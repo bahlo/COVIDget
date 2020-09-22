@@ -19,7 +19,15 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        DataFetcher.shared.getAttributes(objectId: 125) { attributes in
+        // If nothing is configured, return dummy data.
+        let district = configuration.district
+        guard district != nil else {
+            completion(Timeline(entries: [NewInfectionsEntry()], policy: .atEnd))
+            return
+        }
+        
+        let objectId = Int(truncating: district!.value!)
+        DataFetcher.shared.getAttributes(objectId: objectId) { attributes in
             let entries = [
                 NewInfectionsEntry(configuration: configuration, attributes: attributes)
             ]

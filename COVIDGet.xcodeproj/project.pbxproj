@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF74B251A3C8700D2E781 /* IntentHandler.swift */; };
+		141EF750251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
 		1424F4B32518BFEE00CF2D70 /* COVIDGetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */; };
 		1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B42518BFEE00CF2D70 /* ContentView.swift */; };
 		1424F4B72518BFEF00CF2D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4B62518BFEF00CF2D70 /* Assets.xcassets */; };
@@ -29,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		141EF74E251A3C8700D2E781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1424F4A72518BFEE00CF2D70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 141EF748251A3C8700D2E781;
+			remoteInfo = NewInfectionsWidgetIntentHandler;
+		};
 		1424F4C12518BFEF00CF2D70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1424F4A72518BFEE00CF2D70 /* Project object */;
@@ -59,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				141EF750251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex in Embed App Extensions */,
 				14B54E612518EFF10089F2C8 /* NewInfectionsWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -67,6 +78,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewInfectionsWidgetIntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		141EF74B251A3C8700D2E781 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		141EF74D251A3C8700D2E781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1424F4AF2518BFEE00CF2D70 /* COVIDGet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVIDGet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDGetApp.swift; sourceTree = "<group>"; };
 		1424F4B42518BFEE00CF2D70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +108,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		141EF746251A3C8700D2E781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1424F4AC2518BFEE00CF2D70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141EF74A251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				141EF74B251A3C8700D2E781 /* IntentHandler.swift */,
+				141EF74D251A3C8700D2E781 /* Info.plist */,
+			);
+			path = NewInfectionsWidgetIntentHandler;
+			sourceTree = "<group>";
+		};
 		1424F4A62518BFEE00CF2D70 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +164,7 @@
 				1424F4C32518BFEF00CF2D70 /* COVIDGetTests */,
 				1424F4CE2518BFEF00CF2D70 /* COVIDGetUITests */,
 				14B54E562518EFF00089F2C8 /* NewInfectionsWidget */,
+				141EF74A251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */,
 				1424F4E52518C01200CF2D70 /* Frameworks */,
 				1424F4B02518BFEE00CF2D70 /* Products */,
 			);
@@ -146,6 +177,7 @@
 				1424F4C02518BFEF00CF2D70 /* COVIDGetTests.xctest */,
 				1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */,
 				14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */,
+				141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +247,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		141EF748251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 141EF751251A3C8700D2E781 /* Build configuration list for PBXNativeTarget "NewInfectionsWidgetIntentHandler" */;
+			buildPhases = (
+				141EF745251A3C8700D2E781 /* Sources */,
+				141EF746251A3C8700D2E781 /* Frameworks */,
+				141EF747251A3C8700D2E781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewInfectionsWidgetIntentHandler;
+			productName = NewInfectionsWidgetIntentHandler;
+			productReference = 141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1424F4AE2518BFEE00CF2D70 /* COVIDGet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1424F4D42518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGet" */;
@@ -228,6 +277,7 @@
 			);
 			dependencies = (
 				14B54E602518EFF10089F2C8 /* PBXTargetDependency */,
+				141EF74F251A3C8700D2E781 /* PBXTargetDependency */,
 			);
 			name = COVIDGet;
 			productName = COVIDGet;
@@ -296,6 +346,9 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					141EF748251A3C8700D2E781 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					1424F4AE2518BFEE00CF2D70 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -330,11 +383,19 @@
 				1424F4BF2518BFEF00CF2D70 /* COVIDGetTests */,
 				1424F4CA2518BFEF00CF2D70 /* COVIDGetUITests */,
 				14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */,
+				141EF748251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		141EF747251A3C8700D2E781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1424F4AD2518BFEE00CF2D70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +432,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		141EF745251A3C8700D2E781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */,
+				141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1424F4AB2518BFEE00CF2D70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +483,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		141EF74F251A3C8700D2E781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 141EF748251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */;
+			targetProxy = 141EF74E251A3C8700D2E781 /* PBXContainerItemProxy */;
+		};
 		1424F4C22518BFEF00CF2D70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1424F4AE2518BFEE00CF2D70 /* COVIDGet */;
@@ -443,6 +518,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		141EF752251A3C8700D2E781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AK9NEP7BV6;
+				INFOPLIST_FILE = NewInfectionsWidgetIntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfectionsWidgetIntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		141EF753251A3C8700D2E781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AK9NEP7BV6;
+				INFOPLIST_FILE = NewInfectionsWidgetIntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.arne.COVIDGet.NewInfectionsWidgetIntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1424F4D22518BFEF00CF2D70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -736,6 +849,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		141EF751251A3C8700D2E781 /* Build configuration list for PBXNativeTarget "NewInfectionsWidgetIntentHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141EF752251A3C8700D2E781 /* Debug */,
+				141EF753251A3C8700D2E781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1424F4AA2518BFEE00CF2D70 /* Build configuration list for PBXProject "COVIDGet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
