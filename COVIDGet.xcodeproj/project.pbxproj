@@ -10,6 +10,7 @@
 		141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF74B251A3C8700D2E781 /* IntentHandler.swift */; };
 		141EF750251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
+		141EF76E251A40BB00D2E781 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
 		1424F4B32518BFEE00CF2D70 /* COVIDGetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */; };
 		1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B42518BFEE00CF2D70 /* ContentView.swift */; };
 		1424F4B72518BFEF00CF2D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4B62518BFEF00CF2D70 /* Assets.xcassets */; };
@@ -436,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141EF76E251A40BB00D2E781 /* DataFetcher.swift in Sources */,
 				141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */,
 				141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */,
 			);

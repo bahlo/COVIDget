@@ -14,7 +14,7 @@ public class DataFetcher: ObservableObject {
     static let shared = DataFetcher()
     
     func getDistrictData(completion: @escaping (DistrictData) -> Void) {
-        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
+        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
         URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
             .map{ $0.data }
             .decode(type: DistrictData.self, decoder: JSONDecoder())
@@ -29,7 +29,7 @@ public class DataFetcher: ObservableObject {
     }
     
     func getAttributes(objectId: Int, completion: @escaping (DistrictAttributes) -> Void) {
-        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=OBJECTID%3D\(objectId)&outFields=GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
+        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=OBJECTID%3D\(objectId)&outFields=OBJECTID,GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
         URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
             .map{ $0.data }
             .decode(type: DistrictData.self, decoder: JSONDecoder())
@@ -76,6 +76,7 @@ struct DistrictAttributes: Decodable {
     let casesPer100k: Float64
     let cases7Per100k: Float64
     let lastUpdate: String
+    let objectId: Int
     
     enum CodingKeys: String, CodingKey {
         case gen = "GEN"
@@ -83,6 +84,7 @@ struct DistrictAttributes: Decodable {
         case casesPer100k = "cases_per_100k"
         case cases7Per100k = "cases7_per_100k"
         case lastUpdate = "last_update"
+        case objectId = "OBJECTID"
     }
     
     init(from decoder: Decoder) throws {
@@ -92,5 +94,6 @@ struct DistrictAttributes: Decodable {
         casesPer100k = try values.decode(Float64.self, forKey: .casesPer100k)
         cases7Per100k = try values.decode(Float64.self, forKey: .cases7Per100k)
         lastUpdate = try values.decode(String.self, forKey: .lastUpdate)
+        objectId = try values.decode(Int.self, forKey: .objectId)
     }
 }

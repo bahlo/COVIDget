@@ -9,13 +9,15 @@ import Intents
 
 class IntentHandler: INExtension, ConfigurationIntentHandling {
     func provideDistrictOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<District>?, Error?) -> Void) {
-        // TODO: Get available collections from the DataFetcher.
-        let mkk = District(identifier: "mkk", display: "Main-Kinzig-Kreis")
-        mkk.value = 125
-        let tempelhof = District(identifier: "tempelhof", display: "Berlin Tempelhof-Schöneberg")
-        tempelhof.value = 415
-        let collection = INObjectCollection(items: [mkk, tempelhof])
-        completion(collection, nil)
+        DataFetcher.shared.getDistrictData { data in
+            let districts = data.features.map { (feature) -> District in
+                let district = District(identifier: feature.attributes.gen, display: feature.attributes.gen)
+                district.value = feature.attributes.objectId as NSNumber
+                return district
+            }
+            let collection = INObjectCollection(items: districts)
+            completion(collection, nil)
+        }
     }
     
 }
