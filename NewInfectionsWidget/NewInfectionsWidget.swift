@@ -72,7 +72,7 @@ struct NewInfectionsWidgetEntryView : View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("New Infections")
+                Text("New infections")
                     .font(.headline)
                 Text(entry.district)
                     .font(.subheadline)
@@ -84,12 +84,8 @@ struct NewInfectionsWidgetEntryView : View {
                 .foregroundColor(.red)
                 .fontWeight(.medium)
             Spacer()
-            HStack(spacing: 4) {
-                Image(systemName: "calendar")
-                    .font(.system(size: 12))
-                Text("\(entry.formattedDate)")
-                    .font(.footnote)
-            }
+            Text("In the last 7 days")
+                .font(.footnote)
                 .foregroundColor(.gray)
         }.padding()
     }
