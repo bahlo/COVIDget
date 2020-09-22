@@ -6,5 +6,7 @@
   
 */
 "NEW_INFECTIONS" = "Neuinfektionen";
-"IN_ONE_WEEK" = "in einer Woche";
+"PER_100K_IN_ONE_WEEK" = "in den letzten 7 Tagen pro 100.000 Einwohner";
 "NEW_INFECTIONS_DESCRIPTION" = "Zeigt die Anzahl der Neuinfektionen in den letzten sieben Tagen.";
+"SETUP_GUIDE" = "Gehe zu deinem Homescreen, füge ein COVIDGet hinzu und halte es gedrückt um es zu konfigurieren.";
+"SOURCE_NOTE" = "Datenquelle: Robert Koch Institut (RKI), lizensiert unter dl-de/by-2-0.";

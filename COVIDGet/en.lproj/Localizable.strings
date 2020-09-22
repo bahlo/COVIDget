@@ -6,5 +6,7 @@
   
 */
 "NEW_INFECTIONS" = "New infections";
-"IN_ONE_WEEK" = "in one week";
+"PER_100K_IN_ONE_WEEK" = "in the last 7 days per 100k population";
 "NEW_INFECTIONS_DESCRIPTION" = "Display the new infections in your district in the last seven days.";
+"SETUP_GUIDE" = "Go to your homescreen, add a COVIDGet and hold it for configuration.";
+"SOURCE_NOTE" = "The data is coming from the Robert Koch Institut (RKI) in Germany and is licenced under dl-de/by-2-0";

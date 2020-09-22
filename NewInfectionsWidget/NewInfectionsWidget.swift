@@ -73,7 +73,7 @@ struct NewInfectionsEntry: TimelineEntry {
 struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
     let newInfections: LocalizedStringKey = "NEW_INFECTIONS"
-    let inOneWeek: LocalizedStringKey = "IN_ONE_WEEK"
+    let per100kInOneWeek: LocalizedStringKey = "PER_100K_IN_ONE_WEEK"
 
     var body: some View {
         VStack{
@@ -96,9 +96,10 @@ struct NewInfectionsWidgetEntryView : View {
             }
                 .font(.system(size: 40))
             Spacer()
-            Text(inOneWeek)
-                .font(.subheadline)
+            Text(per100kInOneWeek)
+                .font(.system(size: 12))
                 .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
         }.padding(12)
     }
 }
