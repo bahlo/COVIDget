@@ -10,3 +10,5 @@
 "NEW_INFECTIONS_DESCRIPTION" = "Zeigt die Anzahl der Neuinfektionen in den letzten sieben Tagen.";
 "SETUP_GUIDE" = "Gehe zu deinem Homescreen, füge ein COVIDGet hinzu und halte es gedrückt um es zu konfigurieren.";
 "SOURCE_NOTE" = "Datenquelle: Robert Koch Institut (RKI), lizensiert unter dl-de/by-2-0.";
+"VIEW_LICENCE" = "Lizenz öffnen";
+"VIEW_DATA_RECORD" = "Datensatz öffnen";

@@ -94,7 +94,7 @@ struct NewInfectionsWidgetEntryView : View {
                         .foregroundColor(.red)
                 }
             }
-                .font(.system(size: 40))
+                .font(.system(size: 36))
             Spacer()
             Text(per100kInOneWeek)
                 .font(.system(size: 12))
