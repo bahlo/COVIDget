@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  COVIDGet
+
+  Created by Arne Bahlo on 22.09.20.
+  
+*/
+"NEW_INFECTIONS" = "New infections";
+"IN_ONE_WEEK" = "in one week";
