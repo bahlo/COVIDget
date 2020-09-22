@@ -36,7 +36,7 @@ struct NewInfectionsEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
     let district: String
-    let cases: Int
+    let cases7Per100k: Float64
     
     var formattedDate: String {
         get {
@@ -51,7 +51,7 @@ struct NewInfectionsEntry: TimelineEntry {
     init() {
         date = Date()
         configuration = ConfigurationIntent()
-        cases = 0
+        cases7Per100k = 0
         district = "--"
     }
     
@@ -62,7 +62,7 @@ struct NewInfectionsEntry: TimelineEntry {
         date = dateFormatter.date(from: attributes.lastUpdate) ?? Date()
         self.configuration = configuration
         district = attributes.gen
-        cases = attributes.cases
+        cases7Per100k = attributes.cases7Per100k
     }
 }
 
@@ -72,14 +72,14 @@ struct NewInfectionsWidgetEntryView : View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("New infections")
+                Text("New Infections")
                     .font(.headline)
                 Text(entry.district)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
             Spacer()
-            Text("\(entry.cases)")
+            Text(String(format: "%.0f", entry.cases7Per100k))
                 .font(.system(size: 40))
                 .foregroundColor(.red)
                 .fontWeight(.medium)
