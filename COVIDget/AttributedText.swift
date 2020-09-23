@@ -1,6 +1,6 @@
 //
 //  AttributedText.swift
-//  COVIDGet
+//  COVIDget
 //
 //  Created by Arne Bahlo on 22.09.20.
 //

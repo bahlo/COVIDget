@@ -1,6 +1,6 @@
 //
-//  COVIDGetTests.swift
-//  COVIDGetTests
+//  COVIDgetTests.swift
+//  COVIDgetTests
 //
 //  Created by Arne Bahlo on 21.09.20.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import COVIDGet
 
-class COVIDGetTests: XCTestCase {
+class COVIDgetTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

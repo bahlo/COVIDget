@@ -1,6 +1,6 @@
 //
 //  DataFetcherTests.swift
-//  COVIDGetTests
+//  COVIDgetTests
 //
 //  Created by Arne Bahlo on 21.09.20.
 //

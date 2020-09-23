@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  COVIDGet
+//  COVIDget
 //
 //  Created by Arne Bahlo on 21.09.20.
 //
@@ -22,7 +22,7 @@ struct ContentView: View {
                 Link(viewLicence, destination: URL(string: "https://www.govdata.de/dl-de/by-2-0")!)
                 Link(viewDataRecord, destination: URL(string: "https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0")!)
             }
-                .navigationTitle("COVIDGet")
+                .navigationTitle("COVIDget")
                 .padding(16)
         }
     }

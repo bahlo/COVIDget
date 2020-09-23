@@ -1,13 +1,13 @@
 //
-//  COVIDGetUITests.swift
-//  COVIDGetUITests
+//  COVIDgetUITests.swift
+//  COVIDgetUITests
 //
 //  Created by Arne Bahlo on 21.09.20.
 //
 
 import XCTest
 
-class COVIDGetUITests: XCTestCase {
+class COVIDgetUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

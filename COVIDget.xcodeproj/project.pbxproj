@@ -15,8 +15,8 @@
 		1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B42518BFEE00CF2D70 /* ContentView.swift */; };
 		1424F4B72518BFEF00CF2D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4B62518BFEF00CF2D70 /* Assets.xcassets */; };
 		1424F4BA2518BFEF00CF2D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1424F4B92518BFEF00CF2D70 /* Preview Assets.xcassets */; };
-		1424F4C52518BFEF00CF2D70 /* COVIDGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4C42518BFEF00CF2D70 /* COVIDGetTests.swift */; };
-		1424F4D02518BFEF00CF2D70 /* COVIDGetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4CF2518BFEF00CF2D70 /* COVIDGetUITests.swift */; };
+		1424F4C52518BFEF00CF2D70 /* COVIDgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4C42518BFEF00CF2D70 /* COVIDgetTests.swift */; };
+		1424F4D02518BFEF00CF2D70 /* COVIDgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4CF2518BFEF00CF2D70 /* COVIDgetUITests.swift */; };
 		1424F4FF2518C90E00CF2D70 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
 		1424F5062518D55800CF2D70 /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F5052518D55800CF2D70 /* DataFetcherTests.swift */; };
 		144CB2152519F0DF003E3541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 144CB2182519F0DF003E3541 /* Localizable.strings */; };
@@ -82,17 +82,17 @@
 		141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewInfectionsWidgetIntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		141EF74B251A3C8700D2E781 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		141EF74D251A3C8700D2E781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1424F4AF2518BFEE00CF2D70 /* COVIDGet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVIDGet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1424F4AF2518BFEE00CF2D70 /* COVIDget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVIDget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDGetApp.swift; sourceTree = "<group>"; };
 		1424F4B42518BFEE00CF2D70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1424F4B62518BFEF00CF2D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1424F4B92518BFEF00CF2D70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1424F4BB2518BFEF00CF2D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1424F4C02518BFEF00CF2D70 /* COVIDGetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDGetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1424F4C42518BFEF00CF2D70 /* COVIDGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDGetTests.swift; sourceTree = "<group>"; };
+		1424F4C02518BFEF00CF2D70 /* COVIDgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1424F4C42518BFEF00CF2D70 /* COVIDgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDgetTests.swift; sourceTree = "<group>"; };
 		1424F4C62518BFEF00CF2D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDGetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1424F4CF2518BFEF00CF2D70 /* COVIDGetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDGetUITests.swift; sourceTree = "<group>"; };
+		1424F4CB2518BFEF00CF2D70 /* COVIDgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1424F4CF2518BFEF00CF2D70 /* COVIDgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDgetUITests.swift; sourceTree = "<group>"; };
 		1424F4D12518BFEF00CF2D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1424F4E62518C01200CF2D70 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1424F4E82518C01200CF2D70 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -161,9 +161,9 @@
 		1424F4A62518BFEE00CF2D70 = {
 			isa = PBXGroup;
 			children = (
-				1424F4B12518BFEE00CF2D70 /* COVIDGet */,
-				1424F4C32518BFEF00CF2D70 /* COVIDGetTests */,
-				1424F4CE2518BFEF00CF2D70 /* COVIDGetUITests */,
+				1424F4B12518BFEE00CF2D70 /* COVIDget */,
+				1424F4C32518BFEF00CF2D70 /* COVIDgetTests */,
+				1424F4CE2518BFEF00CF2D70 /* COVIDgetUITests */,
 				14B54E562518EFF00089F2C8 /* NewInfectionsWidget */,
 				141EF74A251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */,
 				1424F4E52518C01200CF2D70 /* Frameworks */,
@@ -174,16 +174,16 @@
 		1424F4B02518BFEE00CF2D70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1424F4AF2518BFEE00CF2D70 /* COVIDGet.app */,
-				1424F4C02518BFEF00CF2D70 /* COVIDGetTests.xctest */,
-				1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */,
+				1424F4AF2518BFEE00CF2D70 /* COVIDget.app */,
+				1424F4C02518BFEF00CF2D70 /* COVIDgetTests.xctest */,
+				1424F4CB2518BFEF00CF2D70 /* COVIDgetUITests.xctest */,
 				14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */,
 				141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1424F4B12518BFEE00CF2D70 /* COVIDGet */ = {
+		1424F4B12518BFEE00CF2D70 /* COVIDget */ = {
 			isa = PBXGroup;
 			children = (
 				1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */,
@@ -195,7 +195,7 @@
 				144CB2182519F0DF003E3541 /* Localizable.strings */,
 				14A37D67251A280400DFC924 /* AttributedText.swift */,
 			);
-			path = COVIDGet;
+			path = COVIDget;
 			sourceTree = "<group>";
 		};
 		1424F4B82518BFEF00CF2D70 /* Preview Content */ = {
@@ -206,23 +206,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1424F4C32518BFEF00CF2D70 /* COVIDGetTests */ = {
+		1424F4C32518BFEF00CF2D70 /* COVIDgetTests */ = {
 			isa = PBXGroup;
 			children = (
-				1424F4C42518BFEF00CF2D70 /* COVIDGetTests.swift */,
+				1424F4C42518BFEF00CF2D70 /* COVIDgetTests.swift */,
 				1424F4C62518BFEF00CF2D70 /* Info.plist */,
 				1424F5052518D55800CF2D70 /* DataFetcherTests.swift */,
 			);
-			path = COVIDGetTests;
+			path = COVIDgetTests;
 			sourceTree = "<group>";
 		};
-		1424F4CE2518BFEF00CF2D70 /* COVIDGetUITests */ = {
+		1424F4CE2518BFEF00CF2D70 /* COVIDgetUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1424F4CF2518BFEF00CF2D70 /* COVIDGetUITests.swift */,
+				1424F4CF2518BFEF00CF2D70 /* COVIDgetUITests.swift */,
 				1424F4D12518BFEF00CF2D70 /* Info.plist */,
 			);
-			path = COVIDGetUITests;
+			path = COVIDgetUITests;
 			sourceTree = "<group>";
 		};
 		1424F4E52518C01200CF2D70 /* Frameworks */ = {
@@ -265,9 +265,9 @@
 			productReference = 141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		1424F4AE2518BFEE00CF2D70 /* COVIDGet */ = {
+		1424F4AE2518BFEE00CF2D70 /* COVIDget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1424F4D42518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGet" */;
+			buildConfigurationList = 1424F4D42518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDget" */;
 			buildPhases = (
 				1424F4AB2518BFEE00CF2D70 /* Sources */,
 				1424F4AC2518BFEE00CF2D70 /* Frameworks */,
@@ -280,14 +280,14 @@
 				14B54E602518EFF10089F2C8 /* PBXTargetDependency */,
 				141EF74F251A3C8700D2E781 /* PBXTargetDependency */,
 			);
-			name = COVIDGet;
+			name = COVIDget;
 			productName = COVIDGet;
-			productReference = 1424F4AF2518BFEE00CF2D70 /* COVIDGet.app */;
+			productReference = 1424F4AF2518BFEE00CF2D70 /* COVIDget.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1424F4BF2518BFEF00CF2D70 /* COVIDGetTests */ = {
+		1424F4BF2518BFEF00CF2D70 /* COVIDgetTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1424F4D72518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGetTests" */;
+			buildConfigurationList = 1424F4D72518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDgetTests" */;
 			buildPhases = (
 				1424F4BC2518BFEF00CF2D70 /* Sources */,
 				1424F4BD2518BFEF00CF2D70 /* Frameworks */,
@@ -298,14 +298,14 @@
 			dependencies = (
 				1424F4C22518BFEF00CF2D70 /* PBXTargetDependency */,
 			);
-			name = COVIDGetTests;
+			name = COVIDgetTests;
 			productName = COVIDGetTests;
-			productReference = 1424F4C02518BFEF00CF2D70 /* COVIDGetTests.xctest */;
+			productReference = 1424F4C02518BFEF00CF2D70 /* COVIDgetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1424F4CA2518BFEF00CF2D70 /* COVIDGetUITests */ = {
+		1424F4CA2518BFEF00CF2D70 /* COVIDgetUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1424F4DA2518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGetUITests" */;
+			buildConfigurationList = 1424F4DA2518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDgetUITests" */;
 			buildPhases = (
 				1424F4C72518BFEF00CF2D70 /* Sources */,
 				1424F4C82518BFEF00CF2D70 /* Frameworks */,
@@ -316,9 +316,9 @@
 			dependencies = (
 				1424F4CD2518BFEF00CF2D70 /* PBXTargetDependency */,
 			);
-			name = COVIDGetUITests;
+			name = COVIDgetUITests;
 			productName = COVIDGetUITests;
-			productReference = 1424F4CB2518BFEF00CF2D70 /* COVIDGetUITests.xctest */;
+			productReference = 1424F4CB2518BFEF00CF2D70 /* COVIDgetUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */ = {
@@ -366,7 +366,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1424F4AA2518BFEE00CF2D70 /* Build configuration list for PBXProject "COVIDGet" */;
+			buildConfigurationList = 1424F4AA2518BFEE00CF2D70 /* Build configuration list for PBXProject "COVIDget" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -380,9 +380,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1424F4AE2518BFEE00CF2D70 /* COVIDGet */,
-				1424F4BF2518BFEF00CF2D70 /* COVIDGetTests */,
-				1424F4CA2518BFEF00CF2D70 /* COVIDGetUITests */,
+				1424F4AE2518BFEE00CF2D70 /* COVIDget */,
+				1424F4BF2518BFEF00CF2D70 /* COVIDgetTests */,
+				1424F4CA2518BFEF00CF2D70 /* COVIDgetUITests */,
 				14B54E522518EFF00089F2C8 /* NewInfectionsWidgetExtension */,
 				141EF748251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler */,
 			);
@@ -459,7 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1424F4C52518BFEF00CF2D70 /* COVIDGetTests.swift in Sources */,
+				1424F4C52518BFEF00CF2D70 /* COVIDgetTests.swift in Sources */,
 				1424F5062518D55800CF2D70 /* DataFetcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1424F4D02518BFEF00CF2D70 /* COVIDGetUITests.swift in Sources */,
+				1424F4D02518BFEF00CF2D70 /* COVIDgetUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +492,12 @@
 		};
 		1424F4C22518BFEF00CF2D70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1424F4AE2518BFEE00CF2D70 /* COVIDGet */;
+			target = 1424F4AE2518BFEE00CF2D70 /* COVIDget */;
 			targetProxy = 1424F4C12518BFEF00CF2D70 /* PBXContainerItemProxy */;
 		};
 		1424F4CD2518BFEF00CF2D70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1424F4AE2518BFEE00CF2D70 /* COVIDGet */;
+			target = 1424F4AE2518BFEE00CF2D70 /* COVIDget */;
 			targetProxy = 1424F4CC2518BFEF00CF2D70 /* PBXContainerItemProxy */;
 		};
 		14B54E602518EFF10089F2C8 /* PBXTargetDependency */ = {
@@ -740,7 +740,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/COVIDGet.app/COVIDGet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/COVIDget.app/COVIDget";
 			};
 			name = Debug;
 		};
@@ -762,7 +762,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/COVIDGet.app/COVIDGet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/COVIDget.app/COVIDget";
 			};
 			name = Release;
 		};
@@ -860,7 +860,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1424F4AA2518BFEE00CF2D70 /* Build configuration list for PBXProject "COVIDGet" */ = {
+		1424F4AA2518BFEE00CF2D70 /* Build configuration list for PBXProject "COVIDget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1424F4D22518BFEF00CF2D70 /* Debug */,
@@ -869,7 +869,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1424F4D42518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGet" */ = {
+		1424F4D42518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1424F4D52518BFEF00CF2D70 /* Debug */,
@@ -878,7 +878,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1424F4D72518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGetTests" */ = {
+		1424F4D72518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDgetTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1424F4D82518BFEF00CF2D70 /* Debug */,
@@ -887,7 +887,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1424F4DA2518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDGetUITests" */ = {
+		1424F4DA2518BFEF00CF2D70 /* Build configuration list for PBXNativeTarget "COVIDgetUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1424F4DB2518BFEF00CF2D70 /* Debug */,

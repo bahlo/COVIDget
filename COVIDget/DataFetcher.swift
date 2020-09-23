@@ -1,6 +1,6 @@
 //
 //  DataFetcher.swift
-//  COVIDGet
+//  COVIDget
 //
 //  Created by Arne Bahlo on 21.09.20.
 //
