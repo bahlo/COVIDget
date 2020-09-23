@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import COVIDGet
+@testable import COVIDget
 
 class DataFetcherTests: XCTestCase {
     func testRealCall() throws {
