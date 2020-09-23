@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF74B251A3C8700D2E781 /* IntentHandler.swift */; };
 		141EF750251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 141EF749251A3C8700D2E781 /* NewInfectionsWidgetIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
 		141EF76E251A40BB00D2E781 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
 		1424F4B32518BFEE00CF2D70 /* COVIDGetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B22518BFEE00CF2D70 /* COVIDGetApp.swift */; };
 		1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4B42518BFEE00CF2D70 /* ContentView.swift */; };
@@ -23,12 +22,13 @@
 		144CB2162519F0DF003E3541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 144CB2182519F0DF003E3541 /* Localizable.strings */; };
 		149EF77B25190AB000FC5834 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4FE2518C90E00CF2D70 /* DataFetcher.swift */; };
 		14A37D68251A280400DFC924 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37D67251A280400DFC924 /* AttributedText.swift */; };
+		14B3FECA251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B3FECE251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition */; };
+		14B3FECB251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B3FECE251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition */; };
+		14B3FECC251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B3FECE251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition */; };
 		14B54E542518EFF00089F2C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E62518C01200CF2D70 /* WidgetKit.framework */; };
 		14B54E552518EFF00089F2C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4E82518C01200CF2D70 /* SwiftUI.framework */; };
 		14B54E582518EFF00089F2C8 /* NewInfectionsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */; };
 		14B54E5B2518EFF10089F2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B54E5A2518EFF10089F2C8 /* Assets.xcassets */; };
-		14B54E5D2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
-		14B54E5E2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */; };
 		14B54E612518EFF10089F2C8 /* NewInfectionsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -101,9 +101,11 @@
 		144CB2172519F0DF003E3541 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		144CB21D2519F112003E3541 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		14A37D67251A280400DFC924 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		14B3FECD251B3DE1004BA51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/NewInfectionsWidget.intentdefinition; sourceTree = "<group>"; };
+		14B3FED5251B3DE5004BA51D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NewInfectionsWidget.strings; sourceTree = "<group>"; };
+		14B3FEDC251B3DE6004BA51D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/NewInfectionsWidget.strings; sourceTree = "<group>"; };
 		14B54E532518EFF00089F2C8 /* NewInfectionsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewInfectionsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfectionsWidget.swift; sourceTree = "<group>"; };
-		14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NewInfectionsWidget.intentdefinition; sourceTree = "<group>"; };
 		14B54E5A2518EFF10089F2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B54E5C2518EFF10089F2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				14B54E572518EFF00089F2C8 /* NewInfectionsWidget.swift */,
-				14B54E592518EFF00089F2C8 /* NewInfectionsWidget.intentdefinition */,
+				14B3FECE251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition */,
 				14B54E5A2518EFF10089F2C8 /* Assets.xcassets */,
 				14B54E5C2518EFF10089F2C8 /* Info.plist */,
 			);
@@ -439,7 +441,7 @@
 			files = (
 				141EF76E251A40BB00D2E781 /* DataFetcher.swift in Sources */,
 				141EF74C251A3C8700D2E781 /* IntentHandler.swift in Sources */,
-				141EF75E251A3CB800D2E781 /* NewInfectionsWidget.intentdefinition in Sources */,
+				14B3FECC251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1424F4B52518BFEE00CF2D70 /* ContentView.swift in Sources */,
-				14B54E5E2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */,
+				14B3FECA251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */,
 				1424F4B32518BFEE00CF2D70 /* COVIDGetApp.swift in Sources */,
 				14A37D68251A280400DFC924 /* AttributedText.swift in Sources */,
 				1424F4FF2518C90E00CF2D70 /* DataFetcher.swift in Sources */,
@@ -478,7 +480,7 @@
 			files = (
 				149EF77B25190AB000FC5834 /* DataFetcher.swift in Sources */,
 				14B54E582518EFF00089F2C8 /* NewInfectionsWidget.swift in Sources */,
-				14B54E5D2518EFF10089F2C8 /* NewInfectionsWidget.intentdefinition in Sources */,
+				14B3FECB251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +517,16 @@
 				144CB21D2519F112003E3541 /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		14B3FECE251B3DE1004BA51D /* NewInfectionsWidget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14B3FECD251B3DE1004BA51D /* Base */,
+				14B3FED5251B3DE5004BA51D /* en */,
+				14B3FEDC251B3DE6004BA51D /* de */,
+			);
+			name = NewInfectionsWidget.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
