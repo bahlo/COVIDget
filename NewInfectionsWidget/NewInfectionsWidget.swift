@@ -64,6 +64,13 @@ struct NewInfectionsEntry: TimelineEntry {
         district = "Magrathea"
     }
     
+    init(cases7Per100k: Float64) {
+        date = Date()
+        configuration = ConfigurationIntent()
+        district = "Magrathea"
+        self.cases7Per100k = cases7Per100k
+    }
+    
     init(configuration: ConfigurationIntent, attributes: DistrictAttributes) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy, HH:mm Uhr"
@@ -81,31 +88,36 @@ struct NewInfectionsWidgetEntryView : View {
     let per100kInOneWeek: LocalizedStringKey = "PER_100K_IN_ONE_WEEK"
 
     var body: some View {
-        VStack{
+        VStack {
             VStack(alignment: .leading){
-                Text(newInfections)
-                    .font(.headline)
                 Text(entry.district)
+                    .font(.headline)
+                    .minimumScaleFactor(0.5)
+                Text(newInfections)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             Spacer()
             Group {
                 if entry.cases7Per100k < 1 {
                     Text("0")
                         .foregroundColor(.secondary)
+                } else if entry.cases7Per100k < 50 {
+                    Text(String(format: "%.0f", entry.cases7Per100k))
+                        .foregroundColor(.orange)
                 } else {
                     Text(String(format: "%.0f", entry.cases7Per100k))
                         .foregroundColor(.red)
                 }
             }
-                .font(.system(size: 36))
+                .font(.system(size: 40.0, weight: .regular))
             Spacer()
             Text(per100kInOneWeek)
                 .font(.system(size: 12))
                 .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-        }.padding(12)
+        }
+            .padding(12)
     }
 }
 
@@ -125,7 +137,11 @@ struct NewInfectionsWidget: Widget {
 
 struct NewInfectionsWidget_Previews: PreviewProvider {
     static var previews: some View {
+        NewInfectionsWidgetEntryView(entry: NewInfectionsEntry(cases7Per100k: 0))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
         NewInfectionsWidgetEntryView(entry: NewInfectionsEntry())
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        NewInfectionsWidgetEntryView(entry: NewInfectionsEntry(cases7Per100k: 55))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
