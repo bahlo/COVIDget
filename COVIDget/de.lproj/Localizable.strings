@@ -15,3 +15,7 @@
 "CHECK_CONNECTION" = "Bitte überprüfe deine Internetverbindung.";
 "CHECK_CONFIGURATION" = "Bitte überprüfe deine Konfiguration.";
 "UNKNOWN_ERROR" = "Unbekannter Fehler.";
+"SETUP_STEP_1" = "Halte eine App auf deinem Home-Bildschirm gedrückt und wähle \"Home-Bildschirm bearbeiten\"";
+"SETUP_STEP_2" = "Drücke das Plus oben rechts in der Bildschirmecke und füge ein COVIDget hinzu";
+"SETUP_STEP_3" = "Drück \"Done\" um den Editiermodus zu verlassen, und halte danach das Widget gedrückt und wähle \"Widget bearbeiten\"";
+"SETUP_STEP_4" = "Wähle den Landkreis aus, den du im Widget anzeigen möchtest";
