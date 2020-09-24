@@ -9,7 +9,8 @@
 "PER_100K_IN_ONE_WEEK" = "Last week / 100k";
 "NEW_INFECTIONS_DESCRIPTION" = "Display the new infections in your district in the last seven days per 100k population.";
 "SETUP_GUIDE" = "Go to your homescreen, add a COVIDget and hold it for configuration.";
-"SOURCE_NOTE" = "The data is coming from the Robert Koch Institut (RKI) in Germany and is licenced under dl-de/by-2-0.";
+"SOURCE_NOTE %@" = "The data is coming from the Robert Koch Institut (RKI) in Germany and is licenced under %@.";
+"LICENCE" = "dl-de/by-2-0";
 "VIEW_LICENCE" = "View licence";
 "VIEW_DATA_RECORD" = "View data record";
 "CHECK_CONNECTION" = "Please check your internet connection.";

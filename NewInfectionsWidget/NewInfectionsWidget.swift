@@ -110,11 +110,6 @@ struct NewInfectionsEntry: TimelineEntry {
 
 struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
-    let newInfections: LocalizedStringKey = "NEW_INFECTIONS"
-    let per100kInOneWeek: LocalizedStringKey = "PER_100K_IN_ONE_WEEK"
-    let checkConnection: LocalizedStringKey = "CHECK_CONNECTION"
-    let checkConfiguration: LocalizedStringKey = "CHECK_CONFIGURATION"
-    let unknownError: LocalizedStringKey = "UNKNOWN_ERROR"
     
     var body: some View {
         VStack {
@@ -127,11 +122,11 @@ struct NewInfectionsWidgetEntryView : View {
                     Group {
                         switch error {
                         case is URLError:
-                            Text(checkConnection)
+                            Text("CHECK_CONNECTION")
                         case is ConfigurationError:
-                            Text(checkConfiguration)
+                            Text("CHECK_CONFIGURATION")
                         default:
-                            Text(unknownError)
+                            Text("UNKNOWN_ERROR")
                         }
                     }
                         .font(.system(size: 16))
@@ -143,7 +138,7 @@ struct NewInfectionsWidgetEntryView : View {
                     Text(entry.district)
                         .font(.headline)
                         .minimumScaleFactor(0.5)
-                    Text(newInfections)
+                    Text("NEW_INFECTIONS")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
@@ -163,7 +158,7 @@ struct NewInfectionsWidgetEntryView : View {
                 }
                     .font(.system(size: 40.0, weight: .regular))
                 Spacer()
-                Text(per100kInOneWeek)
+                Text("PER_100K_IN_ONE_WEEK")
                     .font(.system(size: 12))
                     .foregroundColor(.secondary)
             }
