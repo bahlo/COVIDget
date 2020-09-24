@@ -31,9 +31,11 @@ struct ContentView: View {
                 StepView(num: 3, text: Text("SETUP_STEP_3"))
                 StepView(num: 4, text: Text("SETUP_STEP_4"))
                 Spacer()
-                Text("SOURCE_NOTE \(Text("LICENCE"))")
-                Link("VIEW_LICENCE", destination: URL(string: "https://www.govdata.de/dl-de/by-2-0")!)
-                Link("VIEW_DATA_RECORD", destination: URL(string: "https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0")!)
+                Text("SOURCE_NOTE")
+                HStack(spacing: 16) {
+                    Link("VIEW_LICENCE", destination: URL(string: "https://www.govdata.de/dl-de/by-2-0")!)
+                    Link("VIEW_DATASOURCE", destination: URL(string: "https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0")!)
+                }
             }
                 .navigationTitle("COVIDget")
                 .padding(16)
