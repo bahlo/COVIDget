@@ -40,6 +40,7 @@ struct ContentView: View {
                 .navigationTitle("COVIDget")
                 .padding(16)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
