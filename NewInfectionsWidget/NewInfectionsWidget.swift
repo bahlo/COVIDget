@@ -31,8 +31,8 @@ struct Provider: IntentTimelineProvider {
         let objectId = Int(truncating: configuration.district?.value ?? 0)
 
         if objectId < 1 {
-            // None or invalid configuration
-            completion(Timeline(entries: [NewInfectionsEntry(configuration: configuration, error: ConfigurationError.invalidObjectId)], policy: .never))
+            // This is displayed when adding to the homescreen.
+            completion(Timeline(entries: [NewInfectionsEntry()], policy: .never))
             return
         }
         
