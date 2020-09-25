@@ -14,8 +14,25 @@ public class DataFetcher: ObservableObject {
     static let shared = DataFetcher()
     
     func getDistrictData(completion: @escaping (DistrictData?, Error?) -> Void) {
-        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
-        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
+        get(query: "1=1", completion: completion)
+    }
+    
+    func getAttributes(objectId: Int, completion: @escaping (DistrictAttributes?, Error?) -> Void) {
+        get(query: "OBJECTID=\(objectId)") { (data, error) in
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+
+            completion(data!.features[0].attributes, nil)
+        }
+    }
+    
+    private func get(query: String, completion: @escaping (DistrictData?, Error?) -> Void) {
+        let escapedQuery = query.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!
+        let url = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=\(escapedQuery)&outFields=OBJECTID,GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json"
+        let urlComponents = URLComponents(string: url)
+        URLSession.shared.dataTaskPublisher(for: urlComponents!.url!)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse,
                     response.statusCode == 200 else {
@@ -35,32 +52,6 @@ public class DataFetcher: ObservableObject {
                 }
             }) { response in
                 completion(response, nil)
-            }
-            .store(in: &cancellable)
-    }
-    
-    func getAttributes(objectId: Int, completion: @escaping (DistrictAttributes?, Error?) -> Void) {
-        let urlComponents = URLComponents(string: "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=OBJECTID%3D\(objectId)&outFields=OBJECTID,GEN,cases,cases_per_100k,cases7_per_100k,last_update&returnGeometry=false&outSR=4326&f=json")!
-        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
-            .tryMap { output in
-                guard let response = output.response as? HTTPURLResponse,
-                    response.statusCode == 200 else {
-                        throw URLError(.badServerResponse)
-                    }
-                return output.data
-            }
-            .decode(type: DistrictData.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _completion in
-                switch _completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    completion(nil, error)
-                }
-            }) { response in
-                completion(response.features[0].attributes, nil)
             }
             .store(in: &cancellable)
     }

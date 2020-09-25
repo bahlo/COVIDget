@@ -9,16 +9,34 @@ import XCTest
 @testable import COVIDget
 
 class DataFetcherTests: XCTestCase {
-    func testRealCall() throws {
+    func testGetDistrictData() throws {
         let expectation = self.expectation(description: "data received")
         var output: DistrictData?
-        DataFetcher.shared.getDistrictData { (data) in
+        DataFetcher.shared.getDistrictData { (data, error) in
+            if error != nil {
+                XCTFail("Got error: \(error!)")
+            }
             output = data
             expectation.fulfill()
         }
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNotNil(output)
         XCTAssertGreaterThan(output!.features.count, 0)
+    }
+
+    func testGetAttributes() throws {
+        let expectation = self.expectation(description: "data received")
+        var output: DistrictAttributes?
+        DataFetcher.shared.getAttributes(objectId: 125) { (data, error) in
+            if error != nil {
+                XCTFail("Got error: \(error!)")
+            }
+            output = data
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssertNotNil(output)
+        XCTAssertEqual(output!.gen, "Main-Kinzig-Kreis")
     }
     
     func testDecode() throws {
