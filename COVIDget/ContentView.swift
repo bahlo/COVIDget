@@ -23,6 +23,8 @@ struct StepView: View {
 }
 
 struct ContentView: View {
+    var columns: [GridItem] = [GridItem(.flexible(maximum: 120)), GridItem(.flexible())]
+
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 16) {
@@ -30,11 +32,15 @@ struct ContentView: View {
                 StepView(num: 2, text: Text("SETUP_STEP_2"))
                 StepView(num: 3, text: Text("SETUP_STEP_3"))
                 StepView(num: 4, text: Text("SETUP_STEP_4"))
+                StepView(num: 5, text: Text("SETUP_STEP_5"))
                 Spacer()
-                Text("SOURCE_NOTE")
-                HStack(spacing: 16) {
-                    Link("VIEW_LICENCE", destination: URL(string: "https://www.govdata.de/dl-de/by-2-0")!)
-                    Link("VIEW_DATASOURCE", destination: URL(string: "https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0")!)
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
+                    Text("DATASOURCE_LABEL") + Text(":")
+                    Link("RKI Corona Landkreise", destination: URL(string: "https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0")!)
+                    Text("PUBLISHER_LABEL") + Text(":")
+                    Link("Robert Koch Institut (RKI)", destination: URL(string: "https://www.rki.de/")!)
+                    Text("LICENSE_LABEL") + Text(":")
+                    Link("dl-de/by-2-0", destination: URL(string: "https://www.govdata.de/dl-de/by-2-0")!)
                 }
             }
                 .navigationTitle("COVIDget")

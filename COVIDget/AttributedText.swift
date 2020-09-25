@@ -10,17 +10,17 @@ import SwiftUI
 import Foundation
 
 struct AttributedText: UIViewRepresentable {
-    var attributedText: NSAttributedString
-
-    init(_ attributedText: NSAttributedString) {
-        self.attributedText = attributedText
-    }
+    var text: NSAttributedString
+    var width: CGFloat
 
     func makeUIView(context: Context) -> UITextView {
-        return UITextView()
+        let view = UITextView()
+        view.isSelectable = false
+        view.isEditable = false
+        return view
     }
 
-    func updateUIView(_ label: UITextView, context: Context) {
-        label.attributedText = attributedText
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.attributedText = text
     }
 }
