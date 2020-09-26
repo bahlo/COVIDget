@@ -15,8 +15,8 @@
 "CHECK_CONNECTION" = "Please check your internet connection.";
 "CHECK_CONFIGURATION" = "Please check your configuration.";
 "UNKNOWN_ERROR" = "Unknown error.";
-"SETUP_STEP_1" = "Press and hold on an app on your homescreen and select \"Edit Homescreen\"";
-"SETUP_STEP_2" = "Press the plus in the upper corner of your screen and add a COVIDget";
-"SETUP_STEP_3" = "Press \"Done\" to exit wiggle mode";
-"SETUP_STEP_4" = "Press and hold on the widget and select \"Edit Widget\"";
-"SETUP_STEP_5" = "Select the district you want to display in the widget";
+"SETUP_STEP_1" = "Press and hold on an app on your homescreen and select “Edit Homescreen”.";
+"SETUP_STEP_2" = "Press the plus in the upper corner of your screen and add a COVIDget.";
+"SETUP_STEP_2_IPAD" = "Open Today View, press the plus in the top right and add a COVIDget.";
+"SETUP_STEP_3" = "Tap the widget to edit it.";
+"SETUP_STEP_4" = "Select the district you want to display in the widget.";

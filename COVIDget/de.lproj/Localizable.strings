@@ -15,8 +15,8 @@
 "CHECK_CONNECTION" = "Bitte überprüfe deine Internetverbindung.";
 "CHECK_CONFIGURATION" = "Bitte überprüfe deine Konfiguration.";
 "UNKNOWN_ERROR" = "Unbekannter Fehler.";
-"SETUP_STEP_1" = "Halte eine App auf deinem Home-Bildschirm gedrückt und wähle \"Home-Bildschirm bearbeiten\"";
-"SETUP_STEP_2" = "Drücke das Plus in der oberen Ecke und füge ein COVIDget hinzu";
-"SETUP_STEP_3" = "Drücke \"Fertig\" um den Editiermodus zu verlassen";
-"SETUP_STEP_4" = "Halte das Widget gedrückt und wähle \"Widget bearbeiten\"";
-"SETUP_STEP_5" = "Wähle den Landkreis aus, den du im Widget anzeigen möchtest";
+"SETUP_STEP_1" = "Halte eine App auf deinem Home-Bildschirm gedrückt und wähle „Home-Bildschirm bearbeiten“.";
+"SETUP_STEP_2" = "Drücke das Plus in der oberen Ecke und füge ein COVIDget hinzu.";
+"SETUP_STEP_2_IPAD" = "Öffne Ansicht „Heute“, drücke das Plus oben rechts und füge ein COVIDget hinzu.";
+"SETUP_STEP_3" = "Drücke auf das Widget um es zu bearbeiten.";
+"SETUP_STEP_4" = "Wähle den Landkreis aus, den du im Widget anzeigen möchtest.";

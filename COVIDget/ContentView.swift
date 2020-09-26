@@ -30,9 +30,13 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 16) {
                 StepView(num: 1, text: Text("SETUP_STEP_1"))
                 StepView(num: 2, text: Text("SETUP_STEP_2"))
-                StepView(num: 3, text: Text("SETUP_STEP_3"))
+                switch UIDevice.current.userInterfaceIdiom {
+                case .pad:
+                    StepView(num: 3, text: Text("SETUP_STEP_3_IPAD"))
+                default:
+                    StepView(num: 3, text: Text("SETUP_STEP_3"))
+                }
                 StepView(num: 4, text: Text("SETUP_STEP_4"))
-                StepView(num: 5, text: Text("SETUP_STEP_5"))
                 Spacer()
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
                     Text("DATASOURCE_LABEL") + Text(":")
