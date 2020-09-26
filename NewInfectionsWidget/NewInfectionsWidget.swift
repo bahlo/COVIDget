@@ -9,6 +9,8 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+// MARK: Errors
+
 enum ConfigurationError: Error {
     case invalidObjectId
 }
@@ -17,6 +19,8 @@ enum ConfigurationError: Error {
 enum UnknownError: Error {
     case unknown
 }
+
+// MARK: Timeline provider
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> NewInfectionsEntry {
@@ -31,13 +35,13 @@ struct Provider: IntentTimelineProvider {
         let objectId = Int(truncating: configuration.district?.value ?? 0)
 
         if objectId < 1 {
-            // This is displayed when adding to the homescreen.
+            // This is displayed when adding to the homescreen
             completion(Timeline(entries: [NewInfectionsEntry()], policy: .never))
             return
         }
         
         DataFetcher.shared.getAttributes(objectId: objectId) { (attributes, error) in
-            // If we have an error, create a timeline that checks again in 10 seconds.
+            // If we have an error, create a timeline that checks again in 10 seconds
             if error != nil {
                 let entry = NewInfectionsEntry(configuration: configuration, error: error!)
                 let timeline = Timeline(entries: [entry], policy: .after(Calendar.current.date(byAdding: .minute, value: 1, to: Date())!))
@@ -45,15 +49,16 @@ struct Provider: IntentTimelineProvider {
                 return
             }
             
-            // No error, all good.
-            let in24h = Calendar.current.date(byAdding: .day, value: 1, to: Date())
-            let tomorrow = Calendar.current.startOfDay(for: in24h!)
+            // No error, all good
+            let nextHour = Calendar.current.date(byAdding: .hour, value: 1, to: Date())
             let entry = NewInfectionsEntry(configuration: configuration, attributes: attributes!)
-            let timeline = Timeline(entries: [entry], policy: .after(tomorrow))
+            let timeline = Timeline(entries: [entry], policy: .after(nextHour!))
             completion(timeline)
         }
     }
 }
+
+// MARK: Entry
 
 struct NewInfectionsEntry: TimelineEntry {
     let date: Date
@@ -107,6 +112,8 @@ struct NewInfectionsEntry: TimelineEntry {
         self.error = error
     }
 }
+
+// MARK: Widget
 
 struct NewInfectionsWidgetEntryView : View {
     var entry: Provider.Entry
@@ -180,6 +187,8 @@ struct NewInfectionsWidget: Widget {
         .supportedFamilies([.systemSmall])
     }
 }
+
+// MARK: Preview
 
 struct NewInfectionsWidget_Previews: PreviewProvider {
     static var previews: some View {

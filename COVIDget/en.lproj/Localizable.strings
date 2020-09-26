@@ -6,7 +6,7 @@
   
 */
 "NEW_INFECTIONS" = "New infections";
-"PER_100K_IN_ONE_WEEK" = "Last week / 100k";
+"PER_100K_IN_ONE_WEEK" = "7 days / 100k pop.";
 "NEW_INFECTIONS_DESCRIPTION" = "Display the new infections in your district in the last seven days per 100k population.";
 "SETUP_GUIDE" = "Go to your homescreen, add a COVIDget and hold it for configuration.";
 "DATASOURCE_LABEL" = "Datasource";

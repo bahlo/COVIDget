@@ -6,7 +6,7 @@
   
 */
 "NEW_INFECTIONS" = "Neuinfektionen";
-"PER_100K_IN_ONE_WEEK" = "7 Tage / 100.000";
+"PER_100K_IN_ONE_WEEK" = "7 Tage / 100.000 Einw.";
 "NEW_INFECTIONS_DESCRIPTION" = "Zeigt die Anzahl der Neuinfektionen in den letzten sieben Tagen pro 100.000 Einwohner.";
 "SETUP_GUIDE" = "Gehe zu deinem Homescreen, füge ein COVIDget hinzu und halte es gedrückt um es zu konfigurieren.";
 "DATASOURCE_LABEL" = "Datenquelle";
